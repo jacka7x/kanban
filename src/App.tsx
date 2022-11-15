@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom'
+import { ErrorPage } from './components/ErrorPage'
+import { Navbar } from './components/navbar/Navbar'
+import { ProjectBoard } from './components/projectBoard/ProjectBoard'
+import { ProjectSelect } from './components/projectSelect/ProjectSelect'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <ProjectSelect />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/project',
+    element: <ProjectBoard />
+  }
+])
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <RouterProvider router={router} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
