@@ -1,9 +1,15 @@
 import { ProjectButton } from './ProjectButton'
 
-export const Navbar = () => {
+interface Props{
+  user: string | null
+  currentProject: project | null
+}
+
+export const Navbar = ({user, currentProject}: Props) => {
+
   return (
     <div className='navbar'>
-      <ProjectButton />
+      <ProjectButton user={user} currentProjectName={currentProject?.projectName} />
     </div>
   )
 }

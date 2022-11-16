@@ -87,3 +87,27 @@ body {
 .project-button:hover{
   background-color: white;
 }
+
+.project-select{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card{
+  width: 24rem;
+  height: 14rem;
+  margin: 1rem;
+  background-color: var(--mc1);
+  border-radius: 1rem;
+}
+
+.project-card-name{
+  margin: 0.8rem 0 0 1rem;
+  color: white;
+  font-weight: 600;
+}
+
+.new-project-card{
+  background-color: #118ab253;
+}
