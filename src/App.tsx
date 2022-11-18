@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { RouterProvider, createBrowserRouter, useRouteLoaderData} from 'react-router-dom'
+import { RouterProvider, createBrowserRouter} from 'react-router-dom'
 
 import { loadData } from './scripts/loadData'
 

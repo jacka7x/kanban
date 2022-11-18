@@ -22,8 +22,6 @@ export const ProjectBoard = ({currentProject, loadProject}:Props) => {
         .concat(currentProject?.boards)
         .sort((a, b) => a.position - b.position)
       setSortedBoards(sortedArray)
-    } else {
-      
     }
   },[currentProject])
 

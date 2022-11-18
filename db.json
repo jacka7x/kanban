@@ -53,12 +53,118 @@
         {
          "projectId": "12346",
          "projectName": "Test Project",
-         "boards": []
+         "boards": [
+          {
+            "boardName": "todo",
+            "position": 0,
+            "color": "EF476F",
+            "posts": [
+              {
+                "postId": "43256",
+                "title": "Need to do",
+                "body": "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+              },
+              {},
+              {},
+              {}
+            ]
+          },
+          {
+            "boardName": "in progress",
+            "position": 1,
+            "color": "FFD166",
+            "posts": [
+              {
+                "postId": "43257",
+                "title": "Doing this",
+                "body": "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+              },{
+                "postId": "43258",
+                "title": "Getting on with it",
+                "body": "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+              },
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ]
+          },
+          {
+            "boardName": "complete",
+            "position": 2,
+            "color": "06D6A0",
+            "posts": [
+              {
+                "postId": "43259",
+                "title": "Finished!",
+                "body": "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+              }
+            ]
+          }
+        ]
         },
         {
           "projectId": "12347",
           "projectName": "Test Project2",
-          "boards": []
+          "boards": [
+            {
+              "boardName": "todo",
+              "position": 0,
+              "color": "EF476F",
+              "posts": [
+                {
+                  "postId": "43256",
+                  "title": "Need to do",
+                  "body": "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+                }
+              ]
+            },
+            {
+              "boardName": "in progress",
+              "position": 1,
+              "color": "FFD166",
+              "posts": [
+                {
+                  "postId": "43257",
+                  "title": "Doing this",
+                  "body": "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+                },{
+                  "postId": "43258",
+                  "title": "Getting on with it",
+                  "body": "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+                }
+              ]
+            },
+            {
+              "boardName": "complete",
+              "position": 2,
+              "color": "06D6A0",
+              "posts": [
+                {
+                  "postId": "43259",
+                  "title": "Finished!",
+                  "body": "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+              ]
+              
+            }
+          ]
          },
          {
           "projectId": "12348",

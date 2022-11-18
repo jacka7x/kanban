@@ -22,6 +22,7 @@ PALLETE
 *{
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 html, body, #root, .App{
@@ -57,20 +58,27 @@ body {
 
 .navbar{
   height: 4rem;
+  min-height: 4rem;
   padding: 0 0 0 0.5rem;
   background-color: var(--mc2);
+  border-bottom: 2px solid var(--mc1);
 
   display: flex;
   align-items: center;
 }
 
 .project-button{
-  height: 3rem;
+  padding: 0.2rem;
+  height: 2.6rem;
   width: 20rem;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.project-button:hover{
+  outline: 2px solid white;
 }
 
 .pb-acc-name{
@@ -84,12 +92,10 @@ body {
   color: white;
 }
 
-.project-button:hover{
-  background-color: white;
-}
-
 .project-select{
-  flex: 1;
+  margin: 0 auto;
+  max-width: 80%;
+  padding-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -99,22 +105,76 @@ body {
   width: 24rem;
   height: 14rem;
   margin: 1rem;
-  background-color: var(--mc1);
-  border-radius: 1rem;
+  background: linear-gradient(315deg, rgba(17,138,178,1) 30%, rgba(255,255,255,1) 100%);
+  border-radius: 1rem 1rem 0.4rem 0.4rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover{
   outline: 3px solid var(--mc2);
 }
 
-.project-card-name{
-  margin: 0.8rem 0 0 1rem;
+.project-card-title{
+  height: 2rem;
+  border-radius: 0.9rem 0.9rem 0 0;
+  background-color: var(--mc2);
+  display: flex;
+  align-items: center;
+}
+
+.project-card-title p{
+  margin-left: 1rem;
   color: white;
   font-weight: 600;
 }
 
+.project-card-board{
+  margin: 0.4rem 0 0 0;
+  color: var(--mc2);
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-card-board-title{
+  width: 30%;
+  padding: 0.4rem 0 0.4rem 1rem;
+}
+
+.project-card-board-count{
+  width: 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.length-ratio-1{
+  flex: 1;
+}
+
+.length-ratio-2{
+  flex: 1;
+}
+
 .new-project-card{
-  background-color: #118ab253;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-project-card-text{
+  color: white;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+
+  
+  -webkit-user-select: none;      
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .project-boards{
