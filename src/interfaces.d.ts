@@ -2,5 +2,18 @@
 interface project{
   projectId: string
   projectName: string
-  boards: []
+  boards: board[]
+}
+
+interface board{
+  boardName: string
+  position: number
+  color: string
+  posts: post[]
+}
+
+interface post{
+  postId: string
+  title: string
+  body: string
 }

@@ -1,3 +1,4 @@
+import { Link, Outlet } from 'react-router-dom'
 import { ProjectButton } from './ProjectButton'
 
 interface Props{
@@ -8,8 +9,13 @@ interface Props{
 export const Navbar = ({user, currentProject}: Props) => {
 
   return (
-    <div className='navbar'>
-      <ProjectButton user={user} currentProjectName={currentProject?.projectName} />
-    </div>
+    <>
+      <div className='navbar'>
+        <Link to='/'>
+          <ProjectButton user={user} currentProjectName={currentProject?.projectName} />
+        </Link>
+      </div>
+      <Outlet/>
+    </>
   )
 }

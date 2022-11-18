@@ -1,4 +1,6 @@
 
+import { Link } from 'react-router-dom'
+
 interface Props{
   user: string | null
   currentProjectName: string | undefined
@@ -10,8 +12,8 @@ export const ProjectButton = ({
 ) => {
   return (
     <div className='project-button'>
-      <p className='pb-acc-name'>{user}</p>
-      <p className='pb-pjct-name'>{currentProjectName}</p>
-    </div>
+        <p className='pb-acc-name'>{user}</p>      
+        <p className='pb-pjct-name'>{currentProjectName}</p>
+      </div>
   )
 }

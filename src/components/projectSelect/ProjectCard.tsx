@@ -1,12 +1,16 @@
 
+import { Link } from 'react-router-dom'
+
 interface Props{
-  projectName: string
+  project: project
 }
 
-export const ProjectCard = ({projectName}:Props) => {
+export const ProjectCard = ({project}: Props) => {
   return (
-    <div className='project-card'>
-      <p className='project-card-name'>{projectName}</p>
-    </div>
+    <Link to={`project/${project.projectId}`}>
+      <div className='project-card'>
+        <p className='project-card-name'>{project.projectName}</p>
+      </div>
+    </Link>
   )
 }

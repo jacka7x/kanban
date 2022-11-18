@@ -13,6 +13,7 @@ PALLETE
 :root {
   --mc1: #118AB2;
   --mc2: #073B4C;
+  --grey: #d9d9d9;
   --red: #EF476F;
   --yellow: #FFD166;
   --green: #06D6A0;
@@ -56,7 +57,6 @@ body {
 
 .navbar{
   height: 4rem;
-  width: 100%;
   padding: 0 0 0 0.5rem;
   background-color: var(--mc2);
 
@@ -75,7 +75,7 @@ body {
 
 .pb-acc-name{
   font-size: 0.8rem;
-  color: rgb(125, 125, 125);
+  color: var(--grey);
 }
 
 .pb-pjct-name{
@@ -89,6 +89,7 @@ body {
 }
 
 .project-select{
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -102,6 +103,10 @@ body {
   border-radius: 1rem;
 }
 
+.project-card:hover{
+  outline: 3px solid var(--mc2);
+}
+
 .project-card-name{
   margin: 0.8rem 0 0 1rem;
   color: white;
@@ -110,4 +115,61 @@ body {
 
 .new-project-card{
   background-color: #118ab253;
+}
+
+.project-boards{
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+}
+
+.project-board{
+  margin-right: 2rem;
+  width: 24rem;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: var(--mc2);
+}
+
+.project-board-title{
+  height: 3rem;
+  border-radius: 1rem 1rem 0 0 ;
+  background-color: var(--mc1);
+  border-bottom: 3px solid white;
+  display: flex;
+  align-items: center;
+}
+
+.project-board-title p{
+  margin-left: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.project-board-posts{
+  padding: 1rem;
+}
+
+.board-post{
+  margin-bottom: 1rem;
+  width: 100%;
+  background-color: var(--mc1);
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.board-post-title{
+  margin: 0.6rem;
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+}
+
+.board-post-body{
+  margin: 0.6rem;
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: var(--grey);
 }

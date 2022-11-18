@@ -10,35 +10,41 @@
          "boards": [
            {
              "boardName": "todo",
+             "position": 0,
+             "color": "EF476F",
              "posts": [
                {
                  "postId": "43256",
                  "title": "Need to do",
-                 "text":"lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+                 "body": "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
                }
              ]
            },
            {
              "boardName": "in progress",
+             "position": 1,
+             "color": "FFD166",
              "posts": [
                {
                  "postId": "43257",
                  "title": "Doing this",
-                 "text":"lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+                 "body": "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
                },{
-                 "postId": "Getting on with it",
-                 "title": "Need to do",
-                 "text":"lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+                 "postId": "43258",
+                 "title": "Getting on with it",
+                 "body": "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
                }
              ]
            },
            {
              "boardName": "complete",
+             "position": 2,
+             "color": "06D6A0",
              "posts": [
                {
                  "postId": "43259",
                  "title": "Finished!",
-                 "text":"lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
+                 "body": "lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum"
                }
              ]
            }
