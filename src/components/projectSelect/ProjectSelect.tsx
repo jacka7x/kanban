@@ -1,20 +1,34 @@
+
+import styled from 'styled-components'
 import { ProjectCard } from './ProjectCard'
 import { NewProjectCard } from './NewProjectCard'
 import { useEffect } from 'react'
+
+const Container = styled.div`
+  margin: 0 auto;
+  max-width: 80%;
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`
 
 interface Props{
   projectList: project[]
   setCurrentProject: (project: project | null) => void
 }
 
-export const ProjectSelect = ({projectList, setCurrentProject}: Props) => {
+export const ProjectSelect = ({
+  projectList,
+  setCurrentProject
+}: Props) => {
 
   useEffect(() => {
     setCurrentProject(null)
   }, [])
 
   return (
-    <div className='project-select'>
+    <Container>
       {
         projectList.map((project) =>
         <ProjectCard
@@ -23,6 +37,6 @@ export const ProjectSelect = ({projectList, setCurrentProject}: Props) => {
         />)
       }
       <NewProjectCard />
-    </div>
+    </Container>
   )
 }

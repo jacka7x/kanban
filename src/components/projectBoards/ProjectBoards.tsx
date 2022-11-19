@@ -1,7 +1,14 @@
 
+import styled from 'styled-components'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Board } from './Board'
+
+const Container = styled.div`
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+`
 
 interface Props{
   currentProject: project | null
@@ -25,9 +32,9 @@ export const ProjectBoard = ({currentProject, loadProject}:Props) => {
     }
   },[currentProject])
 
-  
+
   return (
-    <div className='project-boards'>
+    <Container>
       {
       sortedBoards && sortedBoards.length > 0
        ? sortedBoards.map((board) =>
@@ -37,6 +44,6 @@ export const ProjectBoard = ({currentProject, loadProject}:Props) => {
           ></Board>)
         : 'NO BOARDS'
       }
-    </div>
+    </Container>
   )
 }

@@ -1,3 +1,6 @@
+import { ThemeProvider } from 'styled-components'
+import { palette, lightTheme } from './styles/themes'
+
 import { useState, useEffect } from 'react'
 import { RouterProvider, createBrowserRouter} from 'react-router-dom'
 
@@ -53,9 +56,16 @@ function App() {
     }
   ])
 
+  const theme = {
+    ...palette,
+    ...lightTheme
+  }
+
   return (
     <div className='App'>
-      <RouterProvider router={router} />
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </div>
   )
 }
