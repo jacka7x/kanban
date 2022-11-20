@@ -4,21 +4,23 @@ import { Link } from 'react-router-dom'
 import { CardBoard } from './CardBoard'
 
 export const Container = styled.div`
-  width: 24rem;
-  height: 14rem;
-  margin: 1rem;
+  margin-bottom: ${props => props.theme.spacing};
+  min-height: 14rem;
   background: linear-gradient(315deg, ${props => props.theme.mc2} 30%, ${props => props.theme.base} 100%);
-  border-radius: 1rem 1rem 0.4rem 0.4rem;
+  border-radius: 0.4rem;
   display: flex;
   flex-direction: column;
-  &:hover{
-    outline: 3px solid ${props => props.theme.mc1};
+  
+  @media (hover: hover) and (pointer: fine){
+    &:hover {
+      outline: 3px solid ${props => props.theme.mc1};
+    }
   }
 `
 
 const Header = styled.div`
   height: 2rem;
-  border-radius: 0.9rem 0.9rem 0 0;
+  border-radius: 0.4rem 0.4rem 0 0;
   background-color: ${props => props.theme.mc1};
   display: flex;
   align-items: center;

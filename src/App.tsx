@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components'
-import { palette, lightTheme } from './styles/themes'
+import { theme } from './styles/theme'
 
 import { useState, useEffect } from 'react'
 import { RouterProvider, createBrowserRouter} from 'react-router-dom'
@@ -55,11 +55,6 @@ function App() {
         ]
     }
   ])
-
-  const theme = {
-    ...palette,
-    ...lightTheme
-  }
 
   return (
     <div className='App'>

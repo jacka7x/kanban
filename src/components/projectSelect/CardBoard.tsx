@@ -10,9 +10,11 @@ const Container = styled.div`
 `
 
 const Title = styled.p<{boardColor: string}>`
-  width: 30%;
+  white-space: nowrap;
+  width: 40%;
   padding: 0.4rem 0 0.4rem 1rem;
   background-color: #${props => props.boardColor};
+  z-index: 1;
 `
 
 const Count = styled.div`

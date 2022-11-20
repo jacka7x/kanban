@@ -3,14 +3,16 @@ import styled from 'styled-components'
 import { Container } from './ProjectCard'
 
 const NewContainer = styled(Container)`
+  background: none;
   display: flex;
   justify-content: center;
   align-items: center;
 `
+
 const Text = styled.p`
-  color: white;
+  color: ${props => props.theme.mc1};
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   
   -webkit-user-select: none;      

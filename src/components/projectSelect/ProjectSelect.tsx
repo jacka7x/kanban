@@ -5,12 +5,22 @@ import { NewProjectCard } from './NewProjectCard'
 import { useEffect } from 'react'
 
 const Container = styled.div`
-  margin: 0 auto;
-  max-width: 80%;
-  padding-top: 1rem;
+  overflow-y: auto;
+  padding: ${props => props.theme.spacing};
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+
+  @media ${props => props.theme.tablet}{
+    display: grid;
+    grid-template-columns: 
+      repeat(auto-fit, minmax(
+        clamp(15rem, calc(15rem + 10vw), 24rem), 1fr));
+    column-gap: ${props => props.theme.spacing};
+  }
+/* 
+  @media ${props => props.theme.laptopL}{
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  } */
 `
 
 interface Props{

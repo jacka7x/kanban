@@ -3,12 +3,11 @@ import { Link, Outlet } from 'react-router-dom'
 import { ProjectButton } from './ProjectButton'
 
 const NavContainer = styled.div`
-  height: 4rem;
-  min-height: 4rem;
+  height: 3.6rem;
+  min-height: 3.6rem;
   padding: 0 0 0 0.5rem;
   background-color: ${props => props.theme.mc1};
-  border-bottom: 2px solid ${props => props.theme.mc2};
-
+  border-bottom: 2px solid ${prop => prop.theme.acc};
   display: flex;
   align-items: center;
 `

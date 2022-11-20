@@ -5,9 +5,19 @@ import { useParams } from 'react-router-dom'
 import { Board } from './Board'
 
 const Container = styled.div`
+  overflow-y: auto;
   flex: 1;
-  padding: 2rem;
+  padding: 0.4rem;
   display: flex;
+  flex-direction: column;
+  
+  @media ${props => props.theme.mobileL}{
+    padding: ${props => props.theme.spacing}
+  }
+
+  @media ${props => props.theme.tablet}{
+    flex-direction: row;
+  }
 `
 
 interface Props{

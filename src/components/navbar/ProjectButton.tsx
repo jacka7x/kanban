@@ -2,14 +2,17 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-  padding: 0.2rem;
-  height: 2.6rem;
-  width: 20rem;
+  padding: 0.2rem 1rem 0.4rem 0.2rem;
+  height: 2rem;
+  width: max-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  &:hover {
-    outline: 2px solid ${props => props.theme.base};
+
+  @media (hover: hover) and (pointer: fine){
+    &:hover {
+      border-right: 2px solid ${props => props.theme.base};
+    }
   }
 `
 const UserName = styled.p`
@@ -18,7 +21,7 @@ const UserName = styled.p`
 `
 const ProjectName = styled.div`
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: ${props => props.theme.base};
 `
 
