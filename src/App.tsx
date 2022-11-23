@@ -1,15 +1,15 @@
 import { ThemeProvider } from 'styled-components'
-import { theme } from './styles/theme'
-
+import { useAuth0 } from '@auth0/auth0-react'
 import { useState, useEffect } from 'react'
-import { RouterProvider, createBrowserRouter} from 'react-router-dom'
+import { Route, RouterProvider, createBrowserRouter, BrowserRouter, Routes} from 'react-router-dom'
 
-import { loadData } from './scripts/loadData'
-
-import { Navbar } from './components/navbar/Navbar'
+import { theme } from './styles/theme'
+import { Main } from './Main'
+import { ProtectedRoute } from './components/auth/ProtectedRoute'
 import { ErrorPage } from './components/ErrorPage'
 import { ProjectBoard } from './components/projectBoards/ProjectBoards'
 import { ProjectSelect } from './components/projectSelect/ProjectSelect'
+import { loadData } from './scripts/loadData'
 
 function App() {
   const [user, setUser] = useState<string | null>(null)
@@ -21,14 +21,15 @@ function App() {
       const databaseData = await loadData()
       setUser(databaseData.username)
       setProjectList(databaseData.projects)
-    }
-    
+    }    
     call()
   }, [])
 
   const loadProject = (projectId: string) => {
     const index = projectList.findIndex((project) => project.projectId === projectId)
     
+    console.log('called loadProject')
+
     if(index < 0){
       setCurrentProject(null)
       console.error('PROJECT ID NOT FOUND')
@@ -38,10 +39,16 @@ function App() {
     setCurrentProject(projectList[index])
   }
 
+  const { isLoading } = useAuth0();
+
+  if (isLoading) {
+    return <p>LOADING</p>;
+  }
+
   const router = createBrowserRouter([
     {
         path: "/", 
-        element: <Navbar user={user} currentProject={currentProject} />,
+        element: <Main user={user} currentProject={currentProject} />,
         errorElement: <ErrorPage />,
         children:[
           {
@@ -49,19 +56,21 @@ function App() {
             element: <ProjectSelect projectList={projectList} setCurrentProject={setCurrentProject}/>,
           },
           {
+            path: '/callback',
+            element: <p>CALLBACK</p>
+          },
+          {
             path: '/project/:projectId',
-            element: <ProjectBoard currentProject={currentProject} loadProject={loadProject}/>,
+            element: <ProtectedRoute component={ProjectBoard} currentProject={currentProject} loadProject={loadProject}/>,
           }
         ]
     }
   ])
 
   return (
-    <div className='App'>
-      <ThemeProvider theme={theme}>
-        <RouterProvider router={router} />
-      </ThemeProvider>
-    </div>
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router}/>
+    </ThemeProvider>
   )
 }
 

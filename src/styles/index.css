@@ -18,7 +18,7 @@ PALLETE
   -webkit-tap-highlight-color: transparent;
 }
 
-html, body, #root, .App{
+html, body, #root{
   height: 100%;
 }
 
