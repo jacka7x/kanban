@@ -41,7 +41,7 @@ export const ProjectCard = ({project}: Props) => {
     .reduce((total, _, i, array) => total + array[i].posts.length, 0)
 
   return (
-    <Link to={`project/${project.projectId}`}>
+    <Link to={`/project/${project.projectId}`}>
       <Container>
         <Header>
           <Title>{project.projectName}</Title>

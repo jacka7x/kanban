@@ -1,7 +1,6 @@
 
 import styled from 'styled-components'
 import { useAuth0 } from '@auth0/auth0-react'
-import { Link } from 'react-router-dom'
 
 import { ProjectButton } from './ProjectButton'
 import { LoginButton } from './LoginButton'
@@ -21,6 +20,7 @@ const NavContainer = styled.div`
 
 const AuthContainer = styled.div`
   margin-right: 1rem;
+  margin-left: auto;
 `
 
 interface Props{
@@ -30,21 +30,24 @@ interface Props{
 
 export const Navbar = ({user, currentProject}: Props) => {
 
-  const auth = useAuth0()
+  const { isAuthenticated } = useAuth0()
 
   return (
     <NavContainer>
-      <Link to='/'>
-        <ProjectButton user={user} currentProjectName={currentProject?.projectName} />
-      </Link>
+      {
+        isAuthenticated && <ProjectButton
+            user={user}
+            currentProjectName={currentProject?.projectName}
+          />
+      } 
       <AuthContainer>
         {
-          auth.isAuthenticated
+          isAuthenticated
             ? <LogoutButton />
-            : (<>
+            : <>
               <SignupButton />
               <LoginButton />
-            </>)
+            </>
         }
       </AuthContainer>
     </NavContainer>

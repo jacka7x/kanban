@@ -29,12 +29,9 @@ export const ProjectBoard = ({currentProject, loadProject}:Props) => {
   const [sortedBoards, setSortedBoards] = useState<board[] | null>(null)
   const projectId = useParams().projectId
 
-  console.log('fuckbucket')
-
-  if(projectId) loadProject(projectId)
-
   // sorts boards in acsending order
   useEffect(() => {
+    if(projectId) loadProject(projectId)
     if(currentProject){
       const baseArray: board[] = []
       const sortedArray = baseArray
@@ -43,7 +40,6 @@ export const ProjectBoard = ({currentProject, loadProject}:Props) => {
       setSortedBoards(sortedArray)
     }
   },[currentProject])
-
 
   return (
     <Container>
